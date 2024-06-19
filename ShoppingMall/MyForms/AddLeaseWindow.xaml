@@ -1,0 +1,38 @@
+﻿<Window x:Class="ShoppingMall.MyForms.AddLeaseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShoppingMall.MyForms"
+        mc:Ignorable="d"
+        Title="Добавить договор аренды" Height="600" Width="400">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Margin="5" Width="250">Введите номер договора</Label>
+            <TextBox x:Name="tbNumber" Margin="5" Width="250"></TextBox>
+
+            <Label Margin="5" Width="250">Введите дату заключения договора</Label>
+            <TextBox x:Name="tbDateOfConlusion" Margin="5" Width="250"></TextBox>
+
+            <Label Margin="5" Width="250">Введите срок действия договора</Label>
+            <TextBox x:Name="tbValidity" Margin="5" Width="250"></TextBox>
+
+            <Label Margin="5" Width="250">Введите арендную ставку договора</Label>
+            <TextBox x:Name="tbRents" Margin="5" Width="250"></TextBox>
+
+            <Label Margin="5" Width="250">Введите условия оплаты договора</Label>
+            <TextBox x:Name="tbTermsOfPayment" Margin="5" Width="250"></TextBox>
+
+            <Label Margin="5" Width="250">Введите размер депозита договора</Label>
+            <TextBox x:Name="tbDepositSize" Margin="5" Width="250"></TextBox>
+
+            <Label Margin="5" Width="250">Введите ID помещения</Label>
+            <TextBox x:Name="tbPremisesId" Margin="5" Width="250"></TextBox>
+
+            <Label Margin="5" Width="250">Введите ID Арендатора</Label>
+            <TextBox x:Name="tbTenantsId" Margin="5" Width="250"></TextBox>
+
+            <Button x:Name="btAddLease" Click="btAddLease_Click" Margin="5" Width="250">Добавить</Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,46 @@
+﻿<Window x:Class="ShoppingMall.MyForms.LeaseAgreementsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShoppingMall.MyForms"
+        mc:Ignorable="d"
+        Title="Договоры аренды" Height="450" Width="1100">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button x:Name="btAddLease" Click="btAddLease_Click" Margin="5" Width="150">Добавить в таблицу</Button>
+                    <Button x:Name="btExitInMenu" Click="btExitInMenu_Click" Margin="5" Width="150">Выйти в меню</Button>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="0">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Margin="5">поиск</Label>
+                        <TextBox Margin="5" MinWidth="200"></TextBox>
+                    </StackPanel>
+
+                    <DataGrid Name="dgContentLease" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Номер договора" Binding="{Binding Number}" />
+                            <DataGridTextColumn Header=" Дата заключения" Binding="{Binding DateOfConlusion}" />
+                            <DataGridTextColumn Header="Срок действия" Binding="{Binding Validity}" />
+                            <DataGridTextColumn Header="Арендная ставку" Binding="{Binding Rents}" />
+                            <DataGridTextColumn Header="Условия оплаты" Binding="{Binding TermsOfPayment}" />
+                            <DataGridTextColumn Header="Размер депозита" Binding="{Binding DepositSize}" />
+                            <DataGridTextColumn Header="ID помещения" Binding="{Binding PremisesId}" />
+                            <DataGridTextColumn Header="ID арендатора" Binding="{Binding TenantId}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,35 @@
+﻿<Window x:Class="ShoppingMall.MyForms.AddPremisesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShoppingMall.MyForms"
+        mc:Ignorable="d"
+        Title="Добавить помещение" Height="600" Width="400">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Margin="5" Width="250">Введите номер помещения</Label>
+            <TextBox x:Name="tbNumber" Margin="5" Width="250"></TextBox>
+            
+            <Label Margin="5" Width="250">Введите площадь помещения</Label>
+            <TextBox x:Name="tbSquare" Margin="5" Width="250"></TextBox>
+            
+            <Label Margin="5" Width="250">Введите этаж помещения</Label>
+            <TextBox x:Name="tbFloor" Margin="5" Width="250"></TextBox>
+            
+            <Label Margin="5" Width="250">Введите расположение помещения</Label>
+            <TextBox x:Name="tbLocation" Margin="5" Width="250"></TextBox>
+            
+            <Label Margin="5" Width="250">Введите тип оттделки помещения</Label>
+            <TextBox x:Name="tbFinishingType" Margin="5" Width="250"></TextBox>
+            
+            <Label Margin="5" Width="250">Введите коммуникации помещения</Label>
+            <TextBox x:Name="tbCommunication" Margin="5" Width="250"></TextBox>
+            
+            <Label Margin="5" Width="250">Введите статус помещения</Label>
+            <TextBox x:Name="tbStatus" Margin="5" Width="250"></TextBox>
+            
+            <Button x:Name="btAddPremises" Click="btAddPremises_Click" Margin="5" Width="250">Добавить</Button>
+        </StackPanel>
+    </Grid>
+</Window>

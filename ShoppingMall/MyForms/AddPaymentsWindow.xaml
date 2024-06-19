@@ -1,0 +1,32 @@
+﻿<Window x:Class="ShoppingMall.MyForms.AddPaymentsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShoppingMall.MyForms"
+        mc:Ignorable="d"
+        Title="Добавить платеж" Height="600" Width="400">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Margin="5" Width="250">Введите дату аренды</Label>
+            <TextBox x:Name="tbDate" Margin="5" Width="250"></TextBox>
+
+            <Label Margin="5" Width="250">Введите сумму платежа</Label>
+            <TextBox x:Name="tbSum" Margin="5" Width="250"></TextBox>
+
+            <Label Margin="5" Width="250">Введите назначение платежа</Label>
+            <TextBox x:Name="tbPurpose" Margin="5" Width="250"></TextBox>
+
+            <Label Margin="5" Width="250">Введите статус платежа</Label>
+            <TextBox x:Name="tbStatus" Margin="5" Width="250"></TextBox>
+
+            <Label Margin="5" Width="250">Введите ID договора аренды</Label>
+            <TextBox x:Name="tbLeaseId" Margin="5" Width="250"></TextBox>
+
+            <Label Margin="5" Width="250">Введите ID Арендатора</Label>
+            <TextBox x:Name="tbTenantsId" Margin="5" Width="250"></TextBox>
+
+            <Button x:Name="btAddPayments" Click="btAddPayments_Click" Margin="5" Width="250">Добавить</Button>
+        </StackPanel>
+    </Grid>
+</Window>

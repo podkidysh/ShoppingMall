@@ -1,0 +1,52 @@
+﻿<Window x:Class="ShoppingMall.MyForms.ManuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShoppingMall.MyForms"
+        mc:Ignorable="d"
+        Title="Меню" Height="300" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button x:Name="btPremises" Click="btPremises_Click" Height="75" Width="150">Помещенеия</Button>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button x:Name="btTenants" Click="btTenants_Click" Height="75" Width="150">Арендаторы</Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button x:Name="btLeaseAgreements" Click="btLeaseAgreements_Click" Height="75" Width="150">Договоры Аренды</Button>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button x:Name="btPayments" Click="btPayments_Click" Height="75" Width="150">Платежи</Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="2">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button Width="150" Margin="5" Name="btExit" Click="btExit_Click">Выйти из системы</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

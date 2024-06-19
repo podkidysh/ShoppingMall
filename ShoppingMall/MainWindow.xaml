@@ -1,0 +1,25 @@
+﻿<Window x:Class="ShoppingMall.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShoppingMall"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="600" Width="800"
+        MinHeight="300" MinWidth="400">
+    <Grid>
+        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Margin="5" Width="300">Логин</Label>
+            <TextBox x:Name="tbName" Margin="5" Width="300"></TextBox>
+            <Label Margin="5" Width="300">Пароль</Label>
+            <StackPanel Orientation="Horizontal">
+            <PasswordBox x:Name="pbPass" Margin="5" Width="240"></PasswordBox>
+                <Button x:Name="btShowPass" Click="btShowPass_Click" Margin="5" Width="52" >показать</Button>
+            </StackPanel>
+            <Button x:Name="btGo" Click="btGo_Click" Margin="5" Width="300">Войти</Button>
+            <Button x:Name="btExit" Click="btExit_Click"  Margin="5" Width="300">Выход</Button>
+        </StackPanel>
+        
+    </Grid>
+</Window>

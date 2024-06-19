@@ -1,0 +1,44 @@
+﻿<Window x:Class="ShoppingMall.MyForms.PaymentsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShoppingMall.MyForms"
+        mc:Ignorable="d"
+        Title="Платежи" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button x:Name="btAddPayments" Click="btAddPayments_Click" Margin="5" Width="150">Добавить в таблицу</Button>
+                    <Button x:Name="btExitInMenu" Click="btExitInMenu_Click" Margin="5" Width="150">Выйти в меню</Button>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="0">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Margin="5">поиск</Label>
+                        <TextBox Margin="5" MinWidth="200"></TextBox>
+                    </StackPanel>
+
+                    <DataGrid Name="dgContentPayments" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Дата аренды" Binding="{Binding Date}" />
+                            <DataGridTextColumn Header="Сумма платежа" Binding="{Binding Sum}" />
+                            <DataGridTextColumn Header="Назначение платежа" Binding="{Binding Purpose}" />
+                            <DataGridTextColumn Header="Статус" Binding="{Binding Status}" />
+                            <DataGridTextColumn Header="ID договора" Binding="{Binding LeaseId}" />
+                            <DataGridTextColumn Header="ID Арендатора" Binding="{Binding TenantsId}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
